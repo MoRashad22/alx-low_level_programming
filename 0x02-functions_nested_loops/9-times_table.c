@@ -4,7 +4,7 @@
  * times_table - prints the 9 times table
  *
  * Example Table
- * 0, 0, 0, 0, .. 
+ * 0, 0, 0, 0, ..
  * 0, 1, 2, 3, ..
  *
 */
@@ -24,8 +24,8 @@ void times_table(void)
 			prod = num * mult;
 
 			/*
-		 	* put space if product is a single number
-		 	* place the first digit if it is two numbers
+			* put space if product is a single number
+			* place the first digit if it is two numbers
 			*/
 			if (prod <= 9)
 				_putchar(' ');
