@@ -35,7 +35,7 @@ void largest_prime_factor(long int num)
 {
 	int prmNu, largest;
 
-	/*first divide with the smallest prime number (two) */
+	/* first divide with the smallest prime number (two) */
 	while (num % 2 == 0)
 		num = num / 2;
 
@@ -57,7 +57,7 @@ void largest_prime_factor(long int num)
 /**
  * main - Entry point
  *
- * Return: 0 (success)
+ * Return: always 0 (success)
 */
 int main(void)
 {
