@@ -7,7 +7,7 @@
  *	numbers that are multiples of 3 and 5 print FizzBuzz
  *	each number and word to be seperated by space
  *
- * Return 0 (success)
+ * Return: 0 (success)
 */
 
 int main(void)
