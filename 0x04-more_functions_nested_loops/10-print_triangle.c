@@ -1,11 +1,11 @@
-#include "min.h"
+#include "main.h"
 
 /**
  * print_triangle - prins a triangle
  *
  * @size: size of the triangle
  *
- * Return: 0 (success)
+ * Return: always 0 (success)
 */
 
 void print_triangle(int size)
