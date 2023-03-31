@@ -18,7 +18,7 @@ int isLower(char c)
  * Return: 1 if true, 0 if false
 */
 
-int isDeelimiter(char c)
+int isDelimiter(char c)
 {
 	int i;
 	char delimiter[] = " \t\n,.!?\"()()";
