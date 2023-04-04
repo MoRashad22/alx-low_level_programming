@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * *_memset - does fill the memory with constant byte
- * @s: pointer made in order to put the constant
+ * *_memset - fills the memory with constant byte
+ * @s: pointer made to put the constant
  * @b: constant
  * @n: maximum bytes to use
  * Return: pointer s
