@@ -15,7 +15,7 @@ int _sqrt_recursion(int n)
 /**
  * found - find square root
  * @n: int to find the square root
- * rot: square root
+ * @rot: square root
  * Return: int
  */
 
