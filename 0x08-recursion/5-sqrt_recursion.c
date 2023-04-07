@@ -6,7 +6,7 @@
  * @rot: square root
  * Return: int
  */
-int square(int n, int tor);
+int found(int n, int rot);
 int _sqrt_recursion(int n)
 {
 	return (found(n, 1));
