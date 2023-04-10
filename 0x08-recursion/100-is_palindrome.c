@@ -31,7 +31,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * check - detect the palindrome
+ * checker - detect the palindrome
  * @s: string
  * @a: left index
  * @b: right index
