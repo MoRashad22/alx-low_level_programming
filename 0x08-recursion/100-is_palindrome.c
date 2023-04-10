@@ -46,5 +46,5 @@ int checker(char *s, int a, int b, int mod)
 	else if (s[a] != s[b])
 		return (0);
 	else
-		return (check(s, a + 1, b - 1, mod));
+		return (checker(s, a + 1, b - 1, mod));
 }
