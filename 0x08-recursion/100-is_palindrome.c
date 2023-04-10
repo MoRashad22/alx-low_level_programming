@@ -27,7 +27,7 @@ int is_palindrome(char *s)
 {
 	int b = end_index(s);
 
-	return (check(s, 0, b - 1, b % 2));
+	return (checker(s, 0, b - 1, b % 2));
 }
 
 /**
