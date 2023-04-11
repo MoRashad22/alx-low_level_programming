@@ -7,11 +7,11 @@
  * Return: 0 (success), otherwise (fail)
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	if (argc == 2)
 	{
-		int x, minicents = 0, money = atoi (argv[1]);
+		int x, minicents = 0, money = atoi(argv[1]);
 		int cents[] = {25, 10, 5, 2, 1};
 
 		for (x = 0; x < 5; x++)
