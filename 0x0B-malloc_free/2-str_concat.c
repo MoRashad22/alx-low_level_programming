@@ -41,9 +41,9 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; i <= a + b; i++)
 	{
 		if (i < a)
-			x[i] = a[i];
+			x[i] = s1[i];
 		else
-			x[i] = b[i - a];
+			x[i] = s2[i - a];
 	}
 	x[i] = '\0';
 	return (x);
