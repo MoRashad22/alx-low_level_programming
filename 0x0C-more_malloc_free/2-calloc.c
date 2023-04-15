@@ -10,13 +10,14 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	char *pon = s;
+	char *ptr = s;
 
 	while (n--)
 		*s++ = b;
 
-	return (pon);
+	return (ptr);
 }
+
 /**
  * *_calloc - allocates the memory for array using malloc
  * @nmemb: lenght of array
