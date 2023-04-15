@@ -8,7 +8,7 @@
 
 void _puts(char *str)
 {
-	int i = 0:
+	int i = 0;
 		while (str[i])
 		{
 			_putchar(str[i]);
@@ -26,7 +26,7 @@ int _atoi(const char *s)
 {
 	int sign = 1;
 	unsigned long int rslt = 0, num1, i;
-	
+
 	for (i = num1; s[i] >= 48 && s[i] <= 57; i++)
 	{
 	rslt *= 10;
