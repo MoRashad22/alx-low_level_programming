@@ -5,6 +5,7 @@
  * _strlen - gets string's length
  *
  * @str: string to be looked at
+ *
  * Return: @str length
  */
 
@@ -31,6 +32,7 @@ char *_strcopy(char *dest, char *src)
 	for (x = 0; src[x]; x++)
 		dest[x] = src[x];
 	dest[x] = '\0';
+
 	return (dest);
 }
 
@@ -65,9 +67,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dodger);
 		return(NULL);
 	}
-	_strcpy(dodger->name, name);
+	_strcopy(dodger->name, name);
 	dodger->age = age;
-	_strcpy(dodger->owner, owner);
+	_strcopy(dodger->owner, owner);
 
 	return (dodger);
 }
