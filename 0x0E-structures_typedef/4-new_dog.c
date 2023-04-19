@@ -44,7 +44,7 @@ char *_strcopy(char *dest, char *src)
  * @age: dog's age
  * @owner: dog's owner
  *
- * Retrun: pointer to the new dog
+ * Return: the new dog pointer
  *		NULL when fails
  */
 
