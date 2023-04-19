@@ -2,6 +2,39 @@
 #include "dog.h"
 
 /**
+ * _strlen - gets string's length
+ *
+ * @str: string to be looked at
+ * Return: @str length
+ */
+
+int _strlen(const char *str)
+{
+	int len = 0;
+
+	while (*str++)
+		len++;
+	return (len);
+}
+
+/**
+ * _strcopy - take a copy from @src to @dest
+ *
+ * @src: string to copy
+ * @dest: destination
+ */
+
+char *_strcopy(char *dest, char *src)
+{
+	int x;
+
+	for (x = 0; src[x]; x++)
+		dest[x] = src[x];
+	dest[x] = '\0';
+	return (dest);
+}
+
+/**
  * new_dog - does create new dog info
  * @name: the dog's name
  * @age: dog's age
@@ -38,4 +71,3 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	return (dodger);
 }
-
