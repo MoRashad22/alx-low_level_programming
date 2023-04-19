@@ -4,18 +4,18 @@
 /**
  * _strlen - gets string's length
  *
- * @str: string to be looked at
+ * @str: string to get length
  *
  * Return: @str length
  */
 
 int _strlen(const char *str)
 {
-	int len = 0;
+	int length = 0;
 
 	while (*str++)
-		len++;
-	return (len);
+		length++;
+	return (length);
 }
 
 /**
@@ -55,7 +55,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!name || age < 0 || !owner)
 		return (NULL);
 
-	dodger = (dog_t *)malloc(sizeof(dog_t));
+	dodger = (dog_t *) malloc(sizeof(dog_t));
 	if (dodger == NULL)
 		return (NULL);
 
