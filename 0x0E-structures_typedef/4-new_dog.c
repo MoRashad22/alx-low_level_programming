@@ -45,7 +45,7 @@ char *_strcopy(char *dest, char *src)
  * @owner: dog's owner
  *
  * Retrun: pointer to the new dog
- * 	NULL when fails
+ *		NULL when fails
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
