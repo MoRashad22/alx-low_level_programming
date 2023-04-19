@@ -50,7 +50,7 @@ char *_strcopy(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dot_t *dodger;
+	dog_t *dodger;
 
 	if (!name || age < 0 || !owner)
 		return (NULL);
