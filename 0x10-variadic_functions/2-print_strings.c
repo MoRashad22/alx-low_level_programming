@@ -5,7 +5,7 @@
  * @separator: string separator
  * @n: number of arguments
  */
-void print_strings(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	int x = n;
 	char *s;

@@ -6,7 +6,7 @@
  * @n: arguments' number
  * Return :the result or 0
  */
-void print_numbers(const char *separator, const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	int x = n;
 	va_list ap;

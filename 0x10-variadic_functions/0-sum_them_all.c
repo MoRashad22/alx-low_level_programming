@@ -6,7 +6,7 @@
  * @...: integers to be summed
  * Return: sum of the integers
  */
-int sum_them_all(const unsigned int n, ...);
+int sum_them_all(const unsigned int n, ...)
 {
 	int result = 0, x = n;
 	va_list ap;
