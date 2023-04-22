@@ -1,4 +1,4 @@
-#include "cariadic_functions"
+#include "variadic_functions"
 
 /**
  * print_char - prints character
