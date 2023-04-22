@@ -40,11 +40,9 @@ void print_string(char *sep, va_list ap)
 {
 	char *str = va_arg(ap, char *);
 
-	switch ((int)(!str)){
+	switch ((int)(!str))
 		case 1:
 			str = "(nil)";
-			break;
-	}
 
 	printf("%s%s", sep, str);
 }
