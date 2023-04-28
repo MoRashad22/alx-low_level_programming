@@ -4,6 +4,7 @@
  * add_node - makes new node at the beginning of list_t list
  * @head: pointing to head pointer
  * @str: string
+ *
  * Return: the size of the list
  * made at mornin
  */
@@ -26,5 +27,5 @@ list_t *add_node(list_t **head, const char *str)
 
 	changed->next = (*head);
 	*head = changed;
-	return (chaned);
+	return (changed);
 }
