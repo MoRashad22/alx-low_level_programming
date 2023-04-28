@@ -1,6 +1,22 @@
 #include "lists.h"
 
 /**
+ * _strlen - gives string length
+ * @s: string length to be checked
+ *
+ * Return: string length
+ */
+int _strlen(char *s)
+{
+	int a = 0;
+	if (!s)
+		return (0);
+	while (*s++)
+		a++;
+	return (a);
+}
+
+/**
  * print_list - prints linked list elements
  * @h: first node pointer
  *
