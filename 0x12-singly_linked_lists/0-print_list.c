@@ -23,7 +23,7 @@ int _strlen(char *s)
  *
  * Return: list size
  */
-size_t print_list(const list_t *h);
+size_t print_list(const list_t *h)
 {
 	size_t x = 0;
 
