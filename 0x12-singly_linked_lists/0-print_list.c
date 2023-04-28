@@ -9,6 +9,7 @@
 int _strlen(char *s)
 {
 	int a = 0;
+
 	if (!s)
 		return (0);
 	while (*s++)
@@ -28,12 +29,9 @@ size_t print_list(const list_t *h);
 
 	while (h)
 	{
-		if (!h->str)
-			printf("[0] (nil)\n");
-		else
-			printf("[%d] %s\n", h->len, h->str);
+		printf("[%d] %s\n", _strlen(h->str), h->str ? : "(nil)";
 		h = h->next;
 		x++;
 	}
-	retrun (x);
+	return (x);
 }
