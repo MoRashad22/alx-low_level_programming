@@ -1,6 +1,6 @@
 #include "lists.h"
-/***
- * *add_nodeint_end - adding node at the end of list
+/**
+ * add_nodeint_end - adding node at the end of list
  * @head: pointing to first node
  * @n: new node's value
  *
