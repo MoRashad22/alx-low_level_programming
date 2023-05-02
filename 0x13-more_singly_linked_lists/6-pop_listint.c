@@ -8,7 +8,7 @@
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *dlt;
+	listint_t *rmv;
 	int popping;
 
 	if (head == NULL || *head == NULL)
@@ -16,9 +16,9 @@ int pop_listint(listint_t **head)
 		return (0);
 	}
 
-	dlt = (*head)->next;
-	popping =(*head-)>n;
+	rmv = (*head)->next;
+	popping =(*head)->n;
 	free(*head);
-	*head = dlt;
+	*head = rmv;
 	return (popping);
 }
