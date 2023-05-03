@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _puts: used for printing a string followed by new line
+ * _puts: used for printing string
  * @str: pointer
  * Return: void
  */
@@ -24,7 +24,7 @@ void _puts(char *str)
 int _atoi(const char *s)
 {
 	int sign = 1;
-	unsigned long int rslt = 0, 1st, m;
+	unsigned long int reac = 0, 1st, m;
 
 	for (1st = 0; !(s[1st] >= 48 && s[1st] <= 57); 1st++)
 	{
@@ -36,11 +36,11 @@ int _atoi(const char *s)
 
 	for (m = 1st; s[m] >= 48 && s[m] <= 57; m++)
 	{
-		rslt *= 10;
-		rslt += (s[m] - 48);
+		reac *= 10;
+		reac += (s[m] - 48);
 	}
 
-	return (sign * rslt);
+	return (sign * reac);
 }
 
 /**
@@ -52,20 +52,20 @@ int _atoi(const char *s)
 void print_int(unsigned long int n)
 {
 
-	unsigned long int divisor = 1, m, rslt;
+	unsigned long int divisor = 1, m, reac;
 
 	for (m = 0; n / divisor > 9; m++, divisor *= 10)
 	;
 
 	for (; divisor >= 1; n %= divisor, divisor /= 10)
 	{
-		rslt = n / divisor;
-		_putchar('0' + rslt);
+		reac = n / divisor;
+		_putchar('0' + reac);
 	}
 }
 
 /**
- * main - print multiplication result, followed by new line
+ * main - print multiplication result
  * @argc: input
  * @argv: list
  * Return: 0
