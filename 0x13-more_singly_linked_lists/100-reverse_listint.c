@@ -17,10 +17,10 @@ listint_t *reverse_listint(listint_t **head)
 	*head = NULL;
 	while (revs)
 	{
-		nxt = (revs)->next;
-		(revs)->next = *head;
+		nxt = revs->next;
+		revs->next = *head;
 		*head = revs;
-		revs = next;
+		revs = nxt;
 	}
 	return (*head);
 }
