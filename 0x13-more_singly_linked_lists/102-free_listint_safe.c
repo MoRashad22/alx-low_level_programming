@@ -8,9 +8,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t l;
-
-	l = 0;
+	size_t npt = 0;
 
 	int fre;
 
@@ -26,15 +24,16 @@ size_t free_listint_safe(listint_t **h)
 		{
 			truth = (*h)->next;
 			*h = truth;
-			l++;
+			npt++;
 		}
 		else
 		{
 			*h = NULL;
-			l++;
+			npt++;
 			break;
 		}
 	}
 	*h = NULL;
-	return (l);
+
+	return (npt);
 }
