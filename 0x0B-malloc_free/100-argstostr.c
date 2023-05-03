@@ -31,7 +31,7 @@ char *argstostr(int ac, char **av)
 
 	for (y = 0; av[w][y] != '\0'; y++)
 	{
-	pdt[con] = av[w][y];
+	updt[con] = av[w][y];
 	_putchar('\n');
 	}
 	updt[con] = '\0';
