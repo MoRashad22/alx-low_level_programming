@@ -1,87 +1,94 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
+#define ERR_MSG "Error"
 /**
- * _puts: used for printing string
- * @str: pointer
- * Return: void
+ * is_digit - checking the string
+ * @u: string to be checked
+ *
+ * Return: 0 if found non-digit, otherwise 1
  */
-void _puts(char *str)
+int is_digit(char *u)
 {
-	int m = 0;
-	while (str[m])
+	int o = 0;
+
+	while (u[o])
 	{
-		_putchar(str[m]);
-		m++;
+		if (u[o] < '0' || u[o] > '9')
+			return (0);
+		o++;
 	}
+	return (1);
 }
-
 /**
- * _atoi - converting string to integer.
- * @s: string
- * Return: the converted integer
+ * _strlen - does return string length
+ * @u: string to be checked
+ * Return: string length
  */
-
-int _atoi(const char *s)
+int _strlen(char *u)
 {
-	int sign = 1;
-	unsigned long int reac = 0, 1st, m;
+	int v = 0;
 
-	for (1st = 0; !(s[1st] >= 48 && s[1st] <= 57); 1st++)
+	while (u[v] != '\0')
 	{
-		if (s[1st] == '-')
+		v++;
+	}
+	return (a);
+}
+/**
+ * errors - handling errors for main
+ */
+void errors(void)
+{
+	printf("Error\n");
+	exit(98);
+}
+/**
+ * main - multiplying two positive numbers
+ * @argc: arguments number
+ * @argv: arguments array
+ * Return: always 0 (Success)
+ */
+int main(int argc, char *argv[])
+{
+	char *s1, *s2;
+	int len1, len2, len, i, carry, digit1, digit2, *sum, k = 0;
+
+	s1 = argv[1], s2 = argv[2];
+	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
+		errors();
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	len = len1 + len2 + 1;
+	sum = malloc(sizeof(int) * len);
+	if (!sum)
+		return (1);
+	for (i = 0; i <= len1 + len2; i++)
+		sum[i] = 0;
+	for (len1 = len1 - 1; len1 >= 0; len1--)
+	{
+		digit1 = s1[len1] - '0';
+		carry = 0;
+		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
 		{
-			sign *= -1;
+			digit2 = s2[len2] - '0';
+			carry += sum[len1 + len2 + 1] + (digit1 * digit2);
+			sum[len1 + len2 + 1] = carry % 10;
+			carry /= 10;
 		}
+		if (carry > 0)
+			sum[len1 + len2 + 1] += carry;
 	}
-
-	for (m = 1st; s[m] >= 48 && s[m] <= 57; m++)
+	for (i = 0; i < len - 1; i++)
 	{
-		reac *= 10;
-		reac += (s[m] - 48);
+		if (sum[i])
+			k = 1;
+		if (k)
+			_putchar(sum[i] + '0');
 	}
-
-	return (sign * reac);
-}
-
-/**
- * print_int - printing integer
- * @n: input
- * Return: 0
- */
-
-void print_int(unsigned long int n)
-{
-
-	unsigned long int divisor = 1, m, reac;
-
-	for (m = 0; n / divisor > 9; m++, divisor *= 10)
-	;
-
-	for (; divisor >= 1; n %= divisor, divisor /= 10)
-	{
-		reac = n / divisor;
-		_putchar('0' + reac);
-	}
-}
-
-/**
- * main - print multiplication result
- * @argc: input
- * @argv: list
- * Return: 0
- */
-
-int main(int argc, char const *argv[])
-{
-	(void)argc;
-
-	if (argc != 3)
-	{
-		_puts("Error ");
-		exit(98);
-	}
-	print_int(_atoi(argv[1]) * _atoi(argv[2]));
+	if (!k)
+		_putchar('0');
 	_putchar('\n');
-
+	free(sum);
 	return (0);
 }
