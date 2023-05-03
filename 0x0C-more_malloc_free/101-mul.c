@@ -79,13 +79,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	thenum = the_num(argv[1]) +  the_num(argv[1]);
-	if (isNumbers != 2)
+	thenum = is_number(argv[1]) +  is_number(argv[1]);
+	if (thenum != 2)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	greater = greater_num(argv[1], argv[2]);
+	greater = larger_num(argv[1], argv[2]);
 
 	if (greater == 1)
 		sum = mul_number(argv[1], argv[2]);
