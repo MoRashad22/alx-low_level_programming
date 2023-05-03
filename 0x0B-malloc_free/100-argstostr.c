@@ -14,7 +14,7 @@ char *argstostr(int ac, char **av)
 	int w, length, con, y;
 	char *updt;
 
-	if (ac == 0 || av == 0)
+	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
@@ -29,12 +29,12 @@ char *argstostr(int ac, char **av)
 	}
 	for (w = 0; w < ac; w++)
 
-		for (y = 0; av[w][y] != '\0'; y++)
-
-			updt[con] = av[w][y];
-			_putchar('\n');
-
-		updt[con] = '\0';
-		return (updt);
+	for (y = 0; av[w][y] != '\0'; y++)
+	{
+	pdt[con] = av[w][y];
+	_putchar('\n');
+	}
+	updt[con] = '\0';
+	return (updt);
 
 }
