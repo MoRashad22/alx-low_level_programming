@@ -1,6 +1,6 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 #include <stdio.h>
-#include <stdlib.>
 /**
  * main - printing opcodes of its own
  * @argc: arguments' number
