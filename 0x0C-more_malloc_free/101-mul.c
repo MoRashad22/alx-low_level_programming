@@ -1,86 +1,97 @@
 #include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
- * _puts: used for printing a string followed by new line
- * @str: pointer
- * Return: void
+ * larger_num - funding larger num
+ * @n1: 1st number
+ * @n2: 2nd number
+ * Return: the larger number.
  */
-void _puts(char *str)
+int larger_num(char *n1, char *n2)
 {
-	int m = 0;
-	while (str[m])
+	int a1, a2;
+
+	a1 = strlen(n1);
+	a2 = strlen(n2);
+	
+	if (a1 > a2)
+		return (1);
+	else if (a1 < a2)
+		return (2);
+
+	else if ((*n1 == '\0') && (*n2 == '\0'))
 	{
-		_putchar(str[m]);
-		m++;
+		return (1);
 	}
+	else if ((*n1 != '\0') && (*n2 != '\0'))
+	{
+		if (*n1 >= *n2)
+			return (1);
+		if (*n1 < *n2)
+			return (2);
+	}
+	return ((larger_num(n1++, n2++)));
 }
-
 /**
- * _atoi - converting string to integer.
- * @s: string
- * Return: the converted integer
+ * is_number - finding number
+ * @n: number1
+ * Return: 1 ture or 0 (failed)
  */
-
-int _atoi(const char *s)
+int is_number(char *n)
 {
-	int sign = 1;
-	unsigned long int rslt = 0, num1, c;
-
-	for (num1 = 0; !(s[num1] >= 48 && s[num1] <= 57); num1++)
+	while (*n)
 	{
-		if (s[num1] == '-')
-		{
-			sign *= -1;
-		}
+		if (!((*n >= '0') && (*n <= '9')))
+			return (0);
+		n++;
 	}
-	for (c = num1; s[c] >= 48 && s[i] <= 57; i++)
-	{
-		rslt *= 10;
-		rslt += (s[c] - 48);
-	}
-
-	return (sign * rslt);
+	return (1);
 }
-
 /**
- * print_int - printing integer
- * @n: input
- * Return: 0
+ * mul_number - having the larger number
+ * @n1: 1st number
+ * @n2: 2nd number
+ * Return: larger number.
  */
-
-void print_int(unsigned long int n)
+char *mul_number(char *n1, char *n2)
 {
+	char **k;
 
-	unsigned long int divisor = 1, c, rslt;
-
-	for (c = 0; n / divisor > 9; c++, divisor *= 10)
-	;
-
-	for (; divisor >= 1; n %= divisor, divisor /= 10)
-	{
-		rslt = n / divisor;
-		_putchar('0' + rslt);
-	}
+	(void) v;
+	(void) n1;
+	(void) n2;
+	return (NULL);
 }
-
 /**
- * main - print multiplication result, followed by new line
- * @argc: input
- * @argv: list
- * Return: 0
+ * main - multiplying two numbers 
+ * @argc: counter of argument
+ * @argv: argument vector
+ * Return: 0 (success) or 1 (failed)
  */
-
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-	(void)argc;
+	int greater, thenum;
+	char *sum;
 
+	(void) sum;
 	if (argc != 3)
 	{
-		_puts("Error ");
+		printf("Error\n");
 		exit(98);
 	}
-	print_int(_atoi(argv[1]) * _atoi(argv[2]));
-	_putchar('\n');
+	thenum = the_num(argv[1]) +  the_num(argv[1]);
+	if (isNumbers != 2)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	greater = greater_num(argv[1], argv[2]);
 
+	if (greater == 1)
+		sum = mul_number(argv[1], argv[2]);
+	else
+		sum = mul_number(argv[2], argv[1]);
+
+	printf("%lu\n", (atol(argv[1]) * atol(argv[2])));
 	return (0);
 }
