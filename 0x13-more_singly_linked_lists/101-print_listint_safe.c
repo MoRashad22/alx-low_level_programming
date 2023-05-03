@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * print_listint_safe - safely printing linked list
  * @head: list need to be printed
