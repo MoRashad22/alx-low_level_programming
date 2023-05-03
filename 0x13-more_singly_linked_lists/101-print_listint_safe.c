@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  * print_listint_safe - safely printing linked list
  * @head: list need to be printed
@@ -9,7 +10,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nbr = 0;
-	long int c;
+	 int c;
 
 	while (head)
 	{
