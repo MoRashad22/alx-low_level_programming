@@ -47,4 +47,6 @@ char *argstostr(int ac, char **av)
 		updt[con] = '\n';
 		con++;
 	}
+	updt[con] = '\0';
+	return (updt);
 }
