@@ -11,9 +11,11 @@ int main(int argc, char **argv)
 	int (*checker)(int, int), 1st, 2nd;
 
 	if (argc != 4)
-	{
 		printf("Error\n"), exit(98);
-	}
+
+
+	1st = atoi(argv[1]);
+	2nd = atoi(argv[3]);
 
 	checker = get_op_func(argv[2]);
 	if (!checker)
@@ -21,10 +23,7 @@ int main(int argc, char **argv)
 		printf("Error\n"), exit(99);
 	}
 
-	1st = atoi(argv[1]);
-	2nd = atoi(argv[3]);
-
-	if (!2nd && (argv[2][0] == '/') || (argv[2][0] == '%'))
+	if (!2nd && (argv[2][0] == '/' || argv[2][0] == '%'))
 	{
 		printf("Error\n"), exit(100);
 	}
