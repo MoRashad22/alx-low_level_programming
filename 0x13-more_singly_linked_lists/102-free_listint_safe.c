@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  * free_listint_safe - freeing listint list
  * @h: list's head
@@ -11,9 +12,9 @@ size_t free_listint_safe(listint_t **h)
 
 	l = 0;
 
-	listint_t *truth;
-
 	int fre;
+
+	listint_t *truth;
 
 	if (h == NULL || *h == NULL)
 		return (0);
