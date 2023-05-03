@@ -1,44 +1,49 @@
 #include "main.h"
-#include <stdlib>
 
 /**
  * _puts: used for printing a string followed by new line
  * @str: pointer
  * Return: void
  */
-
 void _puts(char *str)
 {
-	int i = 0;
-		while (str[i])
-		{
-			_putchar(str[i]);
-			i++;
-		}
+	int m = 0;
+	while (str[m])
+	{
+		_putchar(str[m]);
+		m++;
+	}
 }
 
 /**
- * _atoi - converts string to integer.
+ * _atoi - converting string to integer.
  * @s: string
- * Return: integer converted
+ * Return: the converted integer
  */
 
 int _atoi(const char *s)
 {
 	int sign = 1;
-	unsigned long int rslt = 0, num1, i;
+	unsigned long int rslt = 0, num1, c;
 
-	for (i = num1; s[i] >= 48 && s[i] <= 57; i++)
+	for (num1 = 0; !(s[num1] >= 48 && s[num1] <= 57); num1++)
 	{
-	rslt *= 10;
-	rslt += (s[i] - 48);
+		if (s[num1] == '-')
+		{
+			sign *= -1;
+		}
+	}
+	for (c = num1; s[c] >= 48 && s[i] <= 57; i++)
+	{
+		rslt *= 10;
+		rslt += (s[c] - 48);
 	}
 
 	return (sign * rslt);
 }
 
 /**
- * print_int - print integer
+ * print_int - printing integer
  * @n: input
  * Return: 0
  */
@@ -46,7 +51,12 @@ int _atoi(const char *s)
 void print_int(unsigned long int n)
 {
 
-	unsigned long int divisor, divisor = 10
+	unsigned long int divisor = 1, c, rslt;
+
+	for (c = 0; n / divisor > 9; c++, divisor *= 10)
+	;
+
+	for (; divisor >= 1; n %= divisor, divisor /= 10)
 	{
 		rslt = n / divisor;
 		_putchar('0' + rslt);
