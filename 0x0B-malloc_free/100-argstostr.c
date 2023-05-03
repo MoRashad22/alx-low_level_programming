@@ -15,12 +15,13 @@ char *argstostr(int ac, char **av)
 	char *updt;
 
 	if (ac == NULL || av == NULL)
+	{
 		return (NULL);
-
+	}
 	for (w = 0; w < ac; w++)
-
+	{
 	length += strlen(av[w]) + 1;
-
+	}
 	updt = (char *)malloc(length * sizeof(char));
 	if (updt == NULL)
 	{
