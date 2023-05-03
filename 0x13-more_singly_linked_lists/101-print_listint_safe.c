@@ -3,8 +3,7 @@
  * print_listint_safe - safely printing linked list
  * @head: list need to be printed
  *
- * Return: nodes' number
- * made at night
+ * Return: nodes number
  */
 size_t print_listint_safe(const listint_t *head)
 {
