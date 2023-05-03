@@ -1,6 +1,4 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
 * get_op_func - choosing right function to perform
@@ -28,5 +26,5 @@ int (*get_op_func(char *s))(int, int)
 		c++;
 	}
 
-	return (0);
+	return (NULL);
 }
