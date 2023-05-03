@@ -3,30 +3,27 @@
  * main - checking code for Holberton school students followed by new line
  * @argc: argument numbers
  * @argv: argument vector
+ *
  * Return: Always 0
  */
 
 int main(int argc, char **argv)
 {
-	int (*checker)(int, int), 1st, 2nd;
+	int (*check)(int, int), x, y;
 
 	if (argc != 4)
 		printf("Error\n"), exit(98);
 
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
 
-	1st = atoi(argv[1]);
-	2nd = atoi(argv[3]);
-
-	checker = get_op_func(argv[2]);
-	if (!checker)
-	{
+	check = get_op_func(argv[2]);
+	if (!check)
 		printf("Error\n"), exit(99);
-	}
 
-	if (!2nd && (argv[2][0] == '/' || argv[2][0] == '%'))
-	{
+	if (!y && (argv[2][0] == '/' || argv[2][0] == '%'))
 		printf("Error\n"), exit(100);
-	}
-	printf("%d\n", checker(1st, 2nd));
+
+	printf("%d\n", check(x, y));
 	return (0);
 }
