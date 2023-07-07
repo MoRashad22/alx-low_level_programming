@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * clear_bit - clearing bit at index
+ * clear_bit - clears bit at the index
  * @n: number to index
  * @index: bit to clear
  *
- * Return 1 when successful otherwise -1
+ * Return 1 when successful, -1 on error
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
