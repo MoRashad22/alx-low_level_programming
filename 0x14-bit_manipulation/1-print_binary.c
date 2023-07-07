@@ -4,7 +4,7 @@
  * print_binary - printing number as binary string
  * @n: number supposed to be printed
  *
- * Return: nothing
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 		if (n & 1L << --bits)
 		{
 			_putchar('1');
-			printed++;
+			result++;
 		}
 		else if (result)
 			_putchar('0');
